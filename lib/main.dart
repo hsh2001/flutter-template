@@ -20,8 +20,8 @@ class _Screen extends StatelessWidget {
             ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(top: 20),
+        const Padding(
+          padding: EdgeInsets.only(top: 20),
           child: Center(
             child: Text(
               'Hello Flutter!',
