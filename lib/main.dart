@@ -20,7 +20,7 @@ class _Screen extends StatelessWidget {
             ),
           ),
         ),
-        const Padding(
+        Padding(
           padding: EdgeInsets.only(top: 20),
           child: Center(
             child: Text(
