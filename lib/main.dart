@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/provider/CountProvider.dart';
+import 'package:provider/provider.dart';
 
 void main() => runApp(MyApp());
 
@@ -37,10 +39,15 @@ class _Screen extends StatelessWidget {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Hello flutter',
-      theme: ThemeData(primaryColor: Colors.blue),
-      home: Scaffold(body: _Screen()),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => CountProvider()),
+      ],
+      child: MaterialApp(
+        title: 'Hello flutter',
+        theme: ThemeData(primaryColor: Colors.blue),
+        home: Scaffold(body: _Screen()),
+      ),
     );
   }
 }
