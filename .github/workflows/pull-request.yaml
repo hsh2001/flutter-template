@@ -2,8 +2,17 @@ on:
   pull_request:
     types: [opened, edited, synchronize, reopened]
     
-  steps:
-    - uses: deepakputhraya/action-pr-title@master
-      with:
-        allowed_prefixes: 'feat/,fix/,hotfix/'
-        prefix_case_sensitive: true
+jobs:
+  build:
+    name: Check PR title
+    runs-on: 'ubuntu-latest'
+    steps:
+      - uses: deepakputhraya/action-pr-title@master
+        with:
+          regex: '([a-z])+\/([a-z])+' # Regex the title should match.
+          allowed_prefixes: 'feature,fix,JIRA' # title should start with the given prefix
+          disallowed_prefixes: 'feat/,hotfix' # title should not start with the given prefix
+          prefix_case_sensitive: false # title prefix are case insensitive
+          min_length: 5 # Min length of the title
+          max_length: 20 # Max length of the title
+          github_token: ${{ github.token }} # Default: ${{ github.token }}
