@@ -3,6 +3,7 @@ name: Dart
 on: [push]
 jobs:
   build:
+    name: Check flutter lint
     runs-on: ubuntu-latest
 
     steps:
