@@ -6,12 +6,7 @@ import './provider/count_provider.dart';
 void main() => runApp(const MyApp());
 
 /// You can remove _Screen widget to reset project when you use this template.
-class _Screen extends StatefulWidget {
-  @override
-  __ScreenState createState() => __ScreenState();
-}
-
-class __ScreenState extends State<_Screen> {
+class _Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final countProvider = Provider.of<CountProvider>(context);
