@@ -7,7 +7,7 @@
 - **feat/\[feature-name\]**: 새로운 기능 또는 개선 사항을 기록하며 Pull request를 통해 리뷰와 충분한 테스트를 거친 뒤에 `main`으로 merge합니다. 브랜치 이름의 `[feature-name]` 위치에는 기능의 이름이 위치합니다. (예시: `feat/알림-기능-추가`)
 - **fix/\[bug-name\]**: 버그를 수정하는 과정을 기록하며 Pull request를 통해 리뷰와 충분한 테스트를 거친 뒤에 `main`으로 merge합니다. 브랜치 이름의 `[bug-name]` 위치에는 기능의 이름이 위치합니다. (예시: `fix/버튼-터치-불가능-버그`)
 - **hotfix/\[bug-name\]**: 기본적으로 `fix/[bug-name]`와 유사하지만 여기서는 긴급한 수정사항을 다룹니다. 리뷰가 생략될 수 있으며 최소한의 테스트 후에 merge될 수 있습니다.
-- **\[your-name\]/\[branch-name\]**: `feat`, `fix`, `hotfix` 브랜치에서 2명 이상의 인원이 함께 작업할 때 사용하는 브랜치입니다. `[your-name]`에는 자신의 이름 또는 이니셜을 작성하며 `[branch-name]`에는 베이스가 되는 브랜치의 이름을 적습니다. (예시: `황승현/fix/버튼-터치-불가능-버그`) Pull request를 통해 리뷰와 충분한 테스트를 거친 뒤에 베이스 브랜치로 merge합니다. (절대 main으로 merge 하지 않습니다!!)
+- **\[branch-name\]/\[your-name\]**: `feat`, `fix`, `hotfix` 브랜치에서 2명 이상의 인원이 함께 작업할 때 사용하는 브랜치입니다. `[your-name]`에는 자신의 이름 또는 이니셜을 작성하며 `[branch-name]`에는 베이스가 되는 브랜치의 이름을 적습니다. (예시: `fix/버튼-터치-불가능-버그/황승현`) Pull request를 통해 리뷰와 충분한 테스트를 거친 뒤에 베이스 브랜치로 merge합니다. (절대 main으로 merge 하지 않습니다!!)
 
 ## Pull request
 
