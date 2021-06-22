@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/provider/CountProvider.dart';
 import 'package:provider/provider.dart';
+
+import './provider/count_provider.dart';
 
 void main() => runApp(const MyApp());
 
