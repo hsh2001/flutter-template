@@ -5,14 +5,22 @@ import 'package:provider/provider.dart';
 void main() => runApp(const MyApp());
 
 /// You can remove _Screen widget to reset project when you use this template.
-class _Screen extends StatelessWidget {
+class _Screen extends StatefulWidget {
+  @override
+  __ScreenState createState() => __ScreenState();
+}
+
+class __ScreenState extends State<_Screen> {
   @override
   Widget build(BuildContext context) {
+    final countProvider = Provider.of<CountProvider>(context);
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Center(
+        GestureDetector(
+          onTap: countProvider.up,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(100),
             child: Image.asset(
@@ -22,12 +30,16 @@ class _Screen extends StatelessWidget {
             ),
           ),
         ),
-        const Padding(
-          padding: EdgeInsets.only(top: 20),
+        Padding(
+          padding: const EdgeInsets.only(top: 20),
           child: Center(
             child: Text(
-              'Hello Flutter!',
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              'Hello Flutter!\nYou clicked moa\n${countProvider.count} times',
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ),
