@@ -8,7 +8,7 @@ void main() => runApp(const MyApp());
 /// You can remove _Screen widget to reset project when you use this template.
 class _Screen extends StatefulWidget {
   @override
-  __ScreenState createState() => __ScreenState();
+  __ScreenState createState() =>         __ScreenState();
 }
 
 class __ScreenState extends State<_Screen> {
