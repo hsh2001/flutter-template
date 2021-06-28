@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
 import 'provider/count_provider.dart';
-import 'widget/home_screen.dart';
-import 'widget/test_screen.dart';
+import 'screen/home_screen.dart';
+import 'screen/test_screen.dart';
 
 void main() => runApp(const MyApp());
 
